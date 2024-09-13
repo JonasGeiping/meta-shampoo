@@ -13,13 +13,21 @@ dependencies = [
   "torch>=2.2.0"
 ]
 
+[tool.setuptools]
+py-modules = [
+    "matrix_functions",
+    "optimizer_modules"
+]
+
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["distributed_shampoo*"]
-exclude = []
+include = ["distributed_shampoo", "distributed_shampoo*"]
+exclude = ["tests"]
 
 [tool.setuptools.package-data]
 distributed_shampoo = [
     "LICENSE",
     "README.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md"
 ]
