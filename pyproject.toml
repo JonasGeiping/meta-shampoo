@@ -1,35 +1,33 @@
-
-# Copyright (c) Meta Platforms, Inc. and affiliates.
-# All rights reserved.
-# 
-# This source code is licensed under the BSD-style license found in the
-# LICENSE file in the root directory of this source tree.
-# 
-
-[build-system]
+[
+build-system
+]
 requires = [
     "setuptools>=68.2.2",
     "wheel>=0.41.2",
 ]
 build-backend = "setuptools.build_meta"
 
-requires-python = ">= 3.8"
-
-[project]
+[
+project
+]
 name = "distributed-shampoo"
 version = "0.1.0"
+requires-python = ">= 3.8"
 dependencies = [
   "torch>=2.2.0"
 ]
 
-[tool.setuptools.packages.find]
-include = [
-    "distributed_shampoo"
+[
+tool.setuptools.packages.find
 ]
+where = ["."]
+include = ["distributed_shampoo*"]
 exclude = []
 
-[tool.setuptools.package-data]
-litgpt = [
+[
+tool.setuptools.package-data
+]
+distributed_shampoo = [
     "LICENSE",
     "README.md",
 ]
